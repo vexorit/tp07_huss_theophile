@@ -1,0 +1,44 @@
+/* ======== Conteneur ======== */
+div {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 24px 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* ======== Titre ======== */
+h2 {
+  font-size: 26px;
+  color: #1976d2;
+  margin-bottom: 20px;
+}
+
+/* ======== Texte ======== */
+p {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}
+
+p strong {
+  color: #000;
+}
+
+/* ======== Bouton retour ======== */
+a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 14px;
+  background-color: #1976d2;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+a:hover {
+  background-color: #135ba1;
+}

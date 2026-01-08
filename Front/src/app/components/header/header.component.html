@@ -1,0 +1,35 @@
+<header class="app-header">
+  <div class="header-content">
+    <h1>Gestion des Pollutions</h1>
+    <nav>
+      <a routerLink="/pollutions" routerLinkActive="active"
+        >Liste des pollutions</a
+      >
+
+      <!-- Liens visibles seulement si authentifié -->
+      <ng-container *ngIf="getIsAuthenticatedSnapshot()">
+        <a routerLink="/pollution-form" routerLinkActive="active">
+          Ajouter une pollution
+        </a>
+        <a
+          routerLink="/favorites"
+          routerLinkActive="active"
+          class="favorites-link"
+        >
+          Mes favoris
+          <span class="badge" *ngIf="favoritesCount$ | async as count">{{
+            count
+          }}</span>
+        </a>
+      </ng-container>
+    </nav>
+
+    <!-- Informations utilisateur et déconnexion -->
+    <div class="user-info" *ngIf="getIsAuthenticatedSnapshot()">
+      <span *ngIf="getUserSnapshot() as user" class="welcome-message">
+        Bienvenue, {{ user.prenom }} {{ user.nom }}
+      </span>
+      <button class="logout-btn" (click)="onLogout()">Déconnexion</button>
+    </div>
+  </div>
+</header>

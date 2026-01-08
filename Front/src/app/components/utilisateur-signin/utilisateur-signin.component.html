@@ -1,0 +1,30 @@
+<div class="form-container">
+  <h2>Créer un compte</h2>
+  <form (ngSubmit)="onSubmit()">
+    <label>Nom :</label>
+    <input type="text" [(ngModel)]="user.nom" name="nom" required />
+
+    <label>Prénom :</label>
+    <input type="text" [(ngModel)]="user.prenom" name="prenom" required />
+
+    <label>Email :</label>
+    <input type="email" [(ngModel)]="user.email" name="email" required />
+
+    <label>Pseudo :</label>
+    <input type="text" [(ngModel)]="user.pseudo" name="pseudo" required />
+
+    <label>Mot de passe :</label>
+    <input
+      type="password"
+      [(ngModel)]="user.password"
+      name="password"
+      required
+    />
+
+    <button type="submit">Créer le compte</button>
+  </form>
+  <p>
+    Déjà un compte ?
+    <a routerLink="/utilisateur/login">Se connecter</a>
+  </p>
+</div>

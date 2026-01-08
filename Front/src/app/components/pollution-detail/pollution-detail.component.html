@@ -1,0 +1,7 @@
+<div *ngIf="pollution">
+  <h2>{{ pollution.city }}</h2>
+  <p><strong>Niveau :</strong> {{ pollution.level }}</p>
+  <p><strong>Date :</strong> {{ pollution.date }}</p>
+  <p><strong>Description :</strong> {{ pollution.description }}</p>
+  <a routerLink="/pollutions">⬅ Retour</a>
+</div>

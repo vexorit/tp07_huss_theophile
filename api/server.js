@@ -15,7 +15,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const credentials = null;
+let credentials = null;
 if(PORT!= 3000){
   const privateKey = fs.readFileSync(process.env.SSL_PRIVKEY, "utf8");
   const certificate = fs.readFileSync(process.env.SSL_FULLCHAIN, "utf8");
